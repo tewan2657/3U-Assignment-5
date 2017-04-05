@@ -43,12 +43,12 @@ public class Hangman1 {
             String guess = input.nextLine();
             
    
-             for(int lives = 6; lives < 0; lives= lives - 1){ 
+       
              if(!word.contains(guess)){
-                System.out.println("You have " + lives + " lives left");
+                System.out.println("You have " + " lives left");
                 
                  }
-            }
+            
             if(word.contains(guess)){
                 System.out.println(word.indexOf(guess));
                 
