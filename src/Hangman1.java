@@ -19,11 +19,48 @@ public class Hangman1 {
         //create a scanner 
         Scanner input = new Scanner(System.in);
         
-        String letters = "helloworld";
+     // ask player one to enter a word 
+        System.out.println("Please enter a word");
+        // create a varibale for the word entered by player one 
+        String word = input.nextLine();
+           
+        String dash = " _";
         
-        letters.contains("o");
+        
+        int length = word.length();
+        
+        for(int i=0; i<length; i++){
+            System.out.print(word.replace(word, dash));
+        }
+        
+        System.out.println("");
+        
+        while(true){
+            
+            //asking player 2 to guess a letter 
+            System.out.println("Guess a letter");
+            // create a variable for the letter guessed by player 2
+            String guess = input.nextLine();
+            
+   
+             for(int lives = 6; lives < 0; lives= lives - 1){ 
+             if(!word.contains(guess)){
+                System.out.println("You have " + lives + " lives left");
+                
+                 }
+            }
+            if(word.contains(guess)){
+                System.out.println(word.indexOf(guess));
+                
+            }
+       
+           
+           
+       
         
         
         
+            }
     }
-}
+    }
+
