@@ -23,14 +23,15 @@ public class Hangman1 {
         System.out.println("Please enter a word");
         // create a varibale for the word entered by player one 
         String word = input.nextLine();
-           
+       // creat a variable for  
         String dash = " _";
         
         
         int length = word.length();
         
         for(int i=0; i<length; i++){
-            System.out.print(word.replace(word, dash));
+           String lines =(word.replace(word, dash));
+            System.out.print(lines);
         }
         
         System.out.println("");
@@ -43,24 +44,29 @@ public class Hangman1 {
             String guess = input.nextLine();
             
    
-       
+      
              if(!word.contains(guess)){
+         
                 System.out.println("You have " + " lives left");
                 
                  }
             
             if(word.contains(guess)){
-                System.out.println(word.indexOf(guess));
-                
+               word.indexOf(guess);
+          
+               
+               
             }
-       
            
            
        
         
         
         
-            }
+            
     }
     }
+    }
+
+
 
