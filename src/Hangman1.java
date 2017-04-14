@@ -58,80 +58,58 @@ public class Hangman1 {
         
        StringBuilder realWord = new StringBuilder(word);
         
+       
         
-        
-        
-        while(true){
+        while(life > 0){
+            
             
             //asking player 2 to guess a letter 
             System.out.println("Guess a letter");
             // create a variable for the letter guessed by player 2
             String guess = input.nextLine();
             
-           
-            
-           if(!word.contains(guess)){
-            for (int i = 0; i < 6; i++){
-           
-                 }
-                
-            life = life - 1;
-                 }
-            System.out.println("You have " + life + " lives left");
-             // when word contains the letter guessed 
-             
+            // when word contains the letter guessed   
+            if(englishWord.contains(guess)){
              for (int i = 0; i < englishWord.length(); ) {
                 char temp = englishWord.charAt(i);
                 
                 if(temp == guess.charAt(0)){
                      realWord.setCharAt(i, guess.charAt(0));
-                }
+            System.out.println("You have " + life + " live(s) left");                }
                
-                 
-                 
                  i++;
             }
                System.out.println(realWord);
-             
-               
-               
-               
-               
-               
-               
-               
-//            if(englishWord.contains(guess)){
-//                int temp1 = englishWord.indexOf(guess);
-//                String firstSection = englishWord.substring(0, temp1+1);
-//                
-//                englishWord.replaceFirst(firstSection, "");
-//                
-//                
-//                
-//                
-//                System.out.println("first section is " + englishWord);
-//                
-//                // 0
-//                int temp = englishWord.indexOf(guess);
-//              
-//                // char = guess (a)
-//                 letter = guess.charAt(0);
-//               
-//                
-////                String temp1 = word.substring(temp, temp);
-////                lines = lines.replace(temp1, guess);
-//                System.out.println(realWord);
-//               
+            }
+            else{
+                
+                for (int i = 0; i < 6; i++){
+           
+                }
+                
+            life = life - 1;
+            System.out.println("You have " + life + " live(s) left");
+ 
+                 }
             
-           
-           
+            }
+               
+               
+               
+            
+          
+                 
+            
+            
+            
+   
        
         
         }
         
             
     }
-    }
+    
     
 
 
